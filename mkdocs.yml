@@ -1,0 +1,78 @@
+site_name: Central Registry
+site_url: https://github.globant.com/pages/CloudNativePatrol/glo-iac-terraform-github-central-registry/
+site_author: Globant
+site_description: >-
+  The Amazing Central Registry Project 
+
+# Repository
+repo_name: CloudNativePatrol/glo-central-registry
+repo_url: https://github.globant.com/CloudNativePatrol/glo-central-registry
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2022 Globant. All rights reserved.'
+
+
+theme:
+  name: material
+  language: en
+  features:
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: light green
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  logo: assets/images/logo.png
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.globant.com/CloudNativePatrol/glo-central-registry
+    - icon: fontawesome/brands/slack
+      link: https://globant.slack.com/archives/C01C8AL7JNT
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/globant
+
+# Page tree
+nav:
+  - Home:
+    - About: index.md
+  - How-to guides:
+    - How to work: how-to-guides/how-to-work.md
+    - Maintainers: how-to-guides/mainteiners.md
+    - Repository Naming Convention: how-to-guides/repository-naming-convention.md
+    - File Templates: how-to-guides/file-templates.md
+    - Versioning Standard: how-to-guides/versioning-standard.md
+  - Tools supported:
+    - Overview: tools-supported/tools-supported.md
+    - Terraform: 
+      - Terraform Modules: tools-supported/terraform/terraform.md
+      - Terraform Modules Readme Template: tools-supported/terraform/terraform-readme-template.md
+    - Ansible: 
+      - Versioning Standard:  tools-supported/ansible/ansible.md
+  - License: LICENSE.md
